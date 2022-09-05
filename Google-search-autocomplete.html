@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Google-search-autocomplete</title>
+    <link
+      rel="stylesheet"
+      href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"
+    />
+    
+   <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="googleLogo">
+      <h1>
+        <span>G</span>
+        <span>o</span>
+        <span>o</span>
+        <span>g</span>
+        <span>l</span>
+        <span>e</span>
+      </h1>
+      <h3>Search Country</h3>
+    </div>
+   <div class="ui-widget">
+      <input
+        type="text"
+        name=""
+        id="autoComplete"
+        placeholder="know about your favorite country..."
+      />
+     
+       <a href="" id="aTag" onclick="searchFn()">Search</a>
+  </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.ui/1.12.1/jquery-ui.min.js"></script>
+    
+    <script src="countryList.js"></script>
+    <script>
+
+
+
+      $("#autoComplete").autocomplete({
+        source: countryList,
+      });
+
+     function searchFn() {
+       
+       var countryName = $('#autoComplete').val();
+           console.log(countryName)
+
+         if(countryName !=""){
+          document.getElementById("aTag").href = "https://en.wikipedia.org/wiki/" + countryName;
+         } else {
+                console.log("country list is empty")
+         }
+              
+
+     }
+
+
+
+    </script>
+  </body>
+</html>

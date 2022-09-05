@@ -1,0 +1,128 @@
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.googleLogo {
+  margin: 5% auto 0 auto;
+  width: 90%;
+  display: grid;
+  grid-row: 1;
+}
+h1 { 
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+  position: relative;
+  font-family: Arial;
+  font-size: 5.5rem;
+  font-style: normal;
+  font-weight: 600;
+  margin: auto;
+}
+h3 {
+  position: relative;
+  margin: 0;
+  text-align: center;
+  font-size: 1.5rem;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #4285f4;
+}
+
+h1 :nth-child(1) {
+  color: #4285f4;
+}
+h1 :nth-child(2) {
+  color: #ea4335;
+}
+h1 :nth-child(3) {
+  color: #fbbc05;
+}
+h1 :nth-child(4) {
+  color: #4285f4;
+}
+h1 :nth-child(5) {
+  color: #34a853;
+}
+h1 :nth-child(6) {
+  color: #ea4335;
+}
+span {
+  position: relative;
+  margin: 0;
+}
+
+.ui-widges{ display: flex;
+            flex-direction: row;
+            align-items: center;
+           align-content: center;
+
+}
+input[type="text"] {
+  width: 40%;
+  position: relative;
+  display: block;
+  margin: 1rem auto;
+  padding: 0.5rem 1rem;
+  outline: none;
+  border: 1px solid grey;
+  border-radius: 10px;
+}
+a{   width: 10%;
+  display: block;
+ position: relative;
+  margin: 1rem auto;
+  padding: 0.5rem 1rem;
+  outline: none;
+  border: 1px solid grey;
+  border-radius: 10px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  font-weight: bolder;
+}
+.ui-autocomplete {
+  position: relative;
+  max-height: 200px;
+  margin: 0 auto 0 auto;
+  min-width: 40%;
+  display: block;
+ 
+  outline: none;
+
+  border-radius: 10px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+ html .ui-autocomplete {
+    margin: 0 auto 0 auto;
+    width: 40%;
+    display: block;
+ }
+@media screen and (max-width: 960px) {
+  .googleLogo {
+    width: 100%;
+  }
+  h1 {
+    font-size: 4rem;
+  }
+  h3 {
+    font-size: 1rem;
+  }
+
+  
+  
+  input[type="text"] {
+    width: 60%;
+  }
+  a{
+    width: 20%;
+  }
+  .ui-autocomplete {
+    max-width: 60%;
+   
+  }
+}
